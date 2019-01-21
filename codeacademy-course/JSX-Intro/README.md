@@ -111,3 +111,7 @@ ReactDOM.render(hello, document.getElementById('app'));
 
 ReactDOM.render(hello, document.getElementById('app'));
 ```
+
+Must read: https://www.codecademy.com/articles/react-virtual-dom
+
+

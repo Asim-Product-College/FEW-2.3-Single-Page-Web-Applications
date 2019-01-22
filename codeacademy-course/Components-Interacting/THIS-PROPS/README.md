@@ -138,3 +138,12 @@ So far, all of the components that you've seen have been self-closing tags, such
 this.props.children would return everything in between <MyComponentClass> and </MyComponentClass>.
 
 If a component has more than one child between its JSX tags, then this.props.children will return those children in an array. However, if a component has only one child, then this.props.children will return the single child, not wrapped in an array.
+`{this.props.children}`
+
+## defaultProps
+if your component class render return is using a prop that isn't provided then the result would be blank.. instead you can set a default prop for this. 
+`Example.defaultProps = {text: 'yo' };`
+the default attribute value on a Componant instance will overwrite this.
+
+props is quite possibly the longest and most difficult lesson in all of our React courses. Congratulations on getting this far!
+

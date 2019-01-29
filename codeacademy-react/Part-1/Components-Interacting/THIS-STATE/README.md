@@ -89,3 +89,24 @@ class Example extends React.Component {
 
 More on the binding trickery: https://reactjs.org/docs/handling-events.html
 
+*When you write a component class method that uses `this`, then you need to bind that method inside of your constructor function!*
+
+## this.setState Automatically Calls render
+inside the render function.
+`<div style={{background:this.state.color}}>`
+that changes a virtual DOM object's color to the new this.state.color, eventually causing a change in the screen.
+
+*Here's why: Any time that you call this.setState(), this.setState() AUTOMATICALLY calls .render() as soon as the state has changed.*
+
+Think of `this.setState()` as actually being two things: `this.setState()`, immediately followed by `.render()`.
+
+That is why you can't call `this.setState()` from inside of the `.render()` method! `this.setState()` automatically calls .render(). If `.render()` calls `this.setState()`, then an infinite loop is created.
+
+## Components Interacting Recap
+In this unit, you learned how to use import and export to access one file from another. You learned about props and state, and the countless variations on how they work.
+
+Before this unit, you learned about JSX, components, and how they can work together.
+
+A React app is basically just a lot of components, setting state and passing props to one another. Now that you have a real understanding of how to use props and state, you have by far the most important tools that you need!
+
+In future lessons, the focus will shift slightly outward. In addition to learning more new skills, you'll also learn your first programming patterns. These large-scale strategies will help you combine what you've learned and really start building.

@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
 
 function InventoryItem(props) {
     return (
-        <div key={props.id}>
-        <h1>{props.name}</h1>
+        <div key={props.id} className="grid-item-display inventory-items">
+        <p><strong>{props.name}</strong></p>
         <p>{props.price}</p>
+        <p >{ props.description }</p>
       </div>      
     )
 }

@@ -1,9 +1,15 @@
 import React from 'react';
-import './App.css';
 
-function CategoryBtn(props) {
+function CategoryBtn(props ) {
+    // console.log("handleCategoryBtnClick:", handleCategoryBtnClick);
+    
+    const label = props.label;
     return (
-        <button onClick="handleButtonClick()">{ props.label }</button>        
+        <button
+            className="category-btn btn waves-effect waves-light"
+            onClick={() => props.handleCategoryBtnClick(label)} >
+            { label }
+        </button>
     )
 }
 export default CategoryBtn;

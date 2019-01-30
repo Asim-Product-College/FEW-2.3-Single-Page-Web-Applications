@@ -1,3 +1,39 @@
 .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+/* PRODUCTS */
+.inventory-items {
+    margin: 1em 0 0 0;
+    padding:0;
+}
+
+.grid-item-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    align-items: stretch;
+    text-align: center;
+}
+
+.category-btn {
+    margin: 10px;
+    text-align: center;
+}
+
+
+
+/* refactor this later if we scale the project up of course, but i think it's fine for now. */
+.title {
+    text-align: center;
+    font-family: monospace;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.inventory-container {
+    margin-bottom: 100px;
 }

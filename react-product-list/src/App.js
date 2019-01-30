@@ -3,6 +3,8 @@ import inventory, { categories } from './inventory'
 import './App.css';
 import CategoryBtn from './CategoryBtn';
 import InventoryItem from './InventoryItem';
+import DisplayAllBtn from './DisplayAllBtn';
+
 
 class App extends Component {
 
@@ -50,7 +52,9 @@ class App extends Component {
 
   getDisplayBtn() {
     // experiencing bug here
-    return <button onClick={this.handleCategoryBtnClick(null)} className="btn waves-effect waves-light">Display All Items</button>
+    return <DisplayAllBtn
+        handleCategoryBtnClick = {this.handleCategoryBtnClick}
+    />
   }
 
   render() {

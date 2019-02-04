@@ -11,12 +11,18 @@
     padding:0;
 }
 
-.grid-item-display {
+.grid-display {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
     align-items: stretch;
     text-align: center;
+}
+
+.eight-gi {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.three-gi {
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .category-btn {

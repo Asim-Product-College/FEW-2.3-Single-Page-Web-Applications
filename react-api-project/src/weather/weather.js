@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Temperature from '../temperature/temperature';
+import WeatherDescription from '../weatherDescription/weatherDescription';
 import { convertToFarenheit } from '../temperature/temperature';
-import WeatherDescription from '../WeatherDescription/WeatherDescription';
+// import Atmosphere from '../Atmosphere/Atmosphere';
 
 
 export class Weather extends Component {
@@ -17,9 +18,7 @@ export class Weather extends Component {
                 <WeatherDescription title={main} description={description} />
                 <div>Icon: {icon}</div>
                 <div>Temp: {temp}</div>
-                <div>Pressure: {pressure}</div>
-                <div>Humidity: {humidity}</div>
-                {/* <div>Temp Min: {temp_min} Max:{temp_max}</div> */}
+                {/* <Atmosphere pressure={pressure} humidity={humidity} /> */}
                 <legend className="legend">Low:</legend><Temperature temp={ convertToFarenheit(temp_min)} />
                 <legend className="legend">High:</legend><Temperature temp={convertToFarenheit(temp_max)} /> 
             </div>

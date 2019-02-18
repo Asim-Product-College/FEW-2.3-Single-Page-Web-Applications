@@ -51,7 +51,7 @@ class App extends Component {
   renderWeather() {
     // This method returns undefined or a JSX component
     if (this.state.weatherData === null) {
-      console.log("returning undefined");
+      console.log("Has not been called yet...");
       return undefined; // If there is no data return undefined
     };
     if (this.state.weatherData.cod !== 200) {
